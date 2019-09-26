@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(".formGroup form").submit(function(event) {
-
+    $(".formGroup").hide();
     var array = [];
 
     // var userInput = ["#input1", "#input2", "#input3", "#input4", "#input5"];
@@ -21,6 +21,19 @@ $(document).ready(function() {
     });
       returnValue.sort();
     console.log(returnValue);
+
+      $(".container-results").show();
+
+      var i = 1;
+      returnValue.forEach(function(val) {
+        $("#input" + i).text(returnValue);
+        i = i + 1;
+
+      });
+
+      console.log(i);
+
+
     event.preventDefault();
   });
 });
