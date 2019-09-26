@@ -26,11 +26,10 @@ $(document).ready(function() {
 
       var i = 1;
       returnValue.forEach(function(val) {
-        $("#input" + i).text(returnValue);
+        $("#inputResult" + i).text(returnValue[i-1]);
         i = i + 1;
 
       });
-
       console.log(i);
 
 
